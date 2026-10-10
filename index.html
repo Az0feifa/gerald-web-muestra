@@ -1,120 +1,78 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es-CR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicio de Limpieza - Demo</title>
-    <style>
-        :root {
-            --primary: #0284c7;
-            --secondary: #e0f2fe;
-            --text-dark: #1e293b;
-            --text-light: #f8fafc;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-
-        .demo-badge {
-            background-color: #991b1b;
-            color: white;
-            text-align: center;
-            font-weight: bold;
-            padding: 0.5rem;
-            position: static;
-            width: 100%;
-        }
-
-        header {
-            background-color: var(--primary);
-            color: var(--text-light);
-            text-align: center;
-            padding: 4rem 1rem;
-            margin-top: 2rem;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-        }
-
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .service-card {
-            background-color: var(--secondary);
-            padding: 2rem;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        .service-card h3 {
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .demo-cta { display:inline-block; margin-top:1.2rem; padding:.8rem 1.2rem; background:#fff; color:#075985; border-radius:8px; font-weight:700; text-decoration:none; }
-        .contact-demo { margin-top:2rem; padding:1.5rem; border:2px solid #0284c7; border-radius:8px; }
-        a:focus-visible { outline:3px solid #f59e0b; outline-offset:4px; }
-        footer {
-            background-color: var(--text-dark);
-            color: var(--text-light);
-            text-align: center;
-            padding: 2rem 1rem;
-            margin-top: 3rem;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f4f1e9">
+  <meta name="description" content="Demostración de diseño web para LimpiaPro Express, un negocio ficticio de limpieza en Costa Rica. Consulta local sin envío de datos.">
+  <title>LimpiaPro Express · Un espacio para respirar · Demostración</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="./assets/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/manrope.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
 </head>
 <body>
-    <div class="demo-badge">ETIQUETA: DEMOSTRACIÓN</div>
-
-    <header>
-        <div class="container">
-            <h1>LimpiaPro Express</h1>
-            <p>Servicios de limpieza profesionales para su hogar u oficina</p>
-            <a class="demo-cta" href="#contacto-demo">Ver cómo sería la solicitud de cotización</a>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="header wrap">
+  <a class="brand" href="#inicio" aria-label="LimpiaPro Express, inicio" translate="no">limpia<span class="brand-dot">.</span><small>LIMPIAPRO EXPRESS</small></a>
+  <nav aria-label="Principal"><a href="#servicios">Servicios</a><a class="nav-cta" href="#consulta">Probar consulta <span aria-hidden="true">↗</span></a></nav>
+</header>
+<main id="contenido">
+  <section class="hero wrap" id="inicio" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="demo-tag"><span aria-hidden="true">◌</span> DEMOSTRACIÓN · negocio ficticio</p>
+      <p class="eyebrow">LIMPIEZA DE ESPACIOS · COSTA RICA</p>
+      <h1 id="hero-title">El espacio<br>vuelve a <em>respirar.</em></h1>
+      <p class="hero-description">Explore una consulta de limpieza pensada para su espacio y sus prioridades.</p>
+      <a class="button primary" href="#consulta">Preparar mi consulta <span aria-hidden="true">↗</span></a>
+      <p class="microcopy">Simulación local. No envía solicitudes.</p>
+      <div class="hero-foot"><span>Hogar / Oficina / Cuidado profundo</span><a href="#servicios" aria-label="Explorar los servicios">Explore <span aria-hidden="true">↓</span></a></div>
+    </div>
+    <figure class="hero-image">
+      <img src="./assets/hogar-1280.webp" srcset="./assets/hogar-640.webp 640w, ./assets/hogar-1280.webp 1280w" sizes="(max-width: 700px) 100vw, 55vw" width="1280" height="823" fetchpriority="high" alt="Sala luminosa con sofá claro, piso de madera y escalera de vidrio.">
+      <div class="image-label" aria-hidden="true">El cuidado empieza<br>por su espacio.</div>
+      <figcaption>Fotografía ilustrativa. No es un trabajo realizado.</figcaption>
+    </figure>
+  </section>
+  <section class="services" id="servicios" aria-labelledby="services-title">
+    <div class="wrap">
+      <div class="section-heading"><p class="eyebrow">01 / EL SERVICIO</p><h2 id="services-title">Cada espacio.<br><em>Su propio cuidado.</em></h2><p>No todo necesita lo mismo. Explore estos alcances conceptuales y vea qué le gustaría consultar.</p></div>
+      <div class="service-layout">
+        <div class="service-picker">
+          <div class="service-buttons" role="group" aria-label="Explorar servicios">
+            <button type="button" data-service="hogar" aria-pressed="true" aria-controls="service-detail"><span class="number">01</span><span>Su hogar<small>El cuidado de todos los días</small></span><span class="service-arrow" aria-hidden="true">↗</span></button>
+            <button type="button" data-service="oficina" aria-pressed="false" aria-controls="service-detail"><span class="number">02</span><span>Su oficina<small>Un espacio para concentrarse</small></span><span class="service-arrow" aria-hidden="true">↗</span></button>
+            <button type="button" data-service="detalle" aria-pressed="false" aria-controls="service-detail"><span class="number">03</span><span>A fondo<small>Atención a zonas específicas</small></span><span class="service-arrow" aria-hidden="true">↗</span></button>
+          </div>
+          <div id="service-detail" class="service-detail" aria-live="polite" aria-atomic="true"><p class="eyebrow">ALCANCE CONCEPTUAL / HOGAR</p><h3>Para los espacios que usted vive.</h3><p>Una consulta sobre pisos, superficies accesibles, cocina y baños. Las prioridades y los materiales definirían el alcance de la visita.</p><p class="service-limit">Por confirmar: productos, frecuencia y condiciones del espacio.</p></div>
+          <div class="no-js-services"><h3>Oficina</h3><p>Superficies de trabajo despejadas, pisos y áreas compartidas. Equipos, documentos y objetos personales quedan fuera del alcance conceptual.</p><h3>A fondo</h3><p>Una zona específica, como cocina o baños, para definir materiales y necesidades. No se presupone limpieza especializada ni trabajo en altura.</p></div>
+          <a class="text-link" href="#consulta">Explorar mi necesidad <span aria-hidden="true">↗</span></a>
         </div>
-    </header>
-
-    <main class="container">
-        <h2>Nuestros Servicios</h2>
-        <div class="services">
-            <div class="service-card">
-                <h3>Limpieza Residencial</h3>
-                <p>Mantenemos su hogar impecable y libre de polvo con métodos eficientes y seguros.</p>
-            </div>
-            <div class="service-card">
-                <h3>Limpieza Comercial</h3>
-                <p>Soluciones para oficinas y comercios. Un entorno de trabajo limpio mejora la productividad.</p>
-            </div>
-            <div class="service-card">
-                <h3>Limpieza Profunda</h3>
-                <p>Ideal para final de obra o limpieza estacional. Nos enfocamos en cada pequeño detalle.</p>
-            </div>
+        <figure class="service-figure"><img id="service-image" src="./assets/sala-1280.webp" srcset="./assets/sala-640.webp 640w, ./assets/sala-1280.webp 1280w" sizes="(max-width: 700px) 100vw, 50vw" width="1280" height="854" loading="lazy" alt="Sala con sofá y superficies de madera, como ejemplo de un hogar."><figcaption><span id="image-context">HOGAR / ESPACIO ILUSTRATIVO</span><span>No es un caso de cliente.</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+  <section class="method wrap" id="recorrido" aria-labelledby="method-title">
+    <div><p class="eyebrow">02 / ANTES DE LA VISITA</p><h2 id="method-title">Primero, entender.<br><em>Después, cuidar.</em></h2><p>Así se organizaría una consulta. Un recorrido de ejemplo, no un procedimiento validado de un negocio real.</p></div>
+    <ol class="steps"><li><span class="number">01</span><div><h3>Conocer el espacio</h3><p>Tipo de lugar, tamaño aproximado y las zonas que requieren atención.</p></div></li><li><span class="number">02</span><div><h3>Acordar el alcance</h3><p>Prioridades, materiales, acceso y exclusiones. Precio y disponibilidad se confirmarían antes.</p></div></li><li><span class="number">03</span><div><h3>Revisar lo acordado</h3><p>Un repaso del alcance para que ambas partes sepan qué se atendería.</p></div></li></ol>
+  </section>
+  <section class="consultation" id="consulta" aria-labelledby="consult-title">
+    <div class="wrap"><div class="section-heading"><p class="eyebrow">03 / PRUEBE LA EXPERIENCIA</p><h2 id="consult-title">Su espacio.<br><em>Sus prioridades.</em></h2><p>Prepare una consulta de ejemplo. No le pediremos nombre, teléfono ni correo. Todo ocurre en esta página.</p></div>
+      <noscript><div class="fallback"><h3>Una consulta empieza por 3 decisiones.</h3><p>Piense en el espacio —hogar u oficina—, las zonas prioritarias y su tamaño aproximado. Con JavaScript activado puede probar el resumen interactivo. Esta página no envía solicitudes ni ofrece servicios reales.</p></div></noscript>
+      <div class="consult-grid" id="preparer" hidden>
+        <div class="choices">
+          <fieldset><legend><span>01</span> ¿Qué espacio necesita atención?</legend><div class="space-options"><label><input type="radio" name="espacio" value="Hogar" checked autocomplete="off"><span>Hogar</span></label><label><input type="radio" name="espacio" value="Oficina" autocomplete="off"><span>Oficina</span></label></div></fieldset>
+          <fieldset><legend><span>02</span> ¿Qué le gustaría priorizar?</legend><p class="field-hint">Puede elegir varias zonas.</p><div class="need-options"><label><input type="checkbox" name="prioridad" value="Pisos y superficies" autocomplete="off"><span>Pisos y superficies</span></label><label><input type="checkbox" name="prioridad" value="Cocina" autocomplete="off"><span>Cocina</span></label><label><input type="checkbox" name="prioridad" value="Baños" autocomplete="off"><span>Baños</span></label><label><input type="checkbox" name="prioridad" value="Atención a fondo" autocomplete="off"><span>Atención a fondo</span></label></div></fieldset>
+          <div class="size-field"><label for="tamano"><span>03</span> Tamaño aproximado</label><select id="tamano" name="tamano" autocomplete="off"><option value="Por definir">Todavía no lo sé</option><option value="Hasta 50 m²">Hasta 50 m²</option><option value="Entre 50 y 100 m²">Entre 50 y 100 m²</option><option value="Más de 100 m²">Más de 100 m²</option></select><p class="field-hint">Solo orienta la conversación. No calcula un precio.</p></div>
+          <button class="button primary" id="review" type="button">Revisar mi resumen <span aria-hidden="true">↓</span></button>
         </div>
-        <section id="contacto-demo" class="contact-demo" aria-labelledby="contacto-titulo">
-            <h2 id="contacto-titulo">Una consulta con la información necesaria</h2>
-            <p>En un sitio real, el botón abriría el WhatsApp autorizado del negocio con un mensaje sobre el tipo de limpieza, la zona y el tamaño aproximado del espacio.</p>
-            <p><strong>Esta es una demostración ficticia:</strong> no envía mensajes, no recibe solicitudes y no representa a una empresa real.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 LimpiaPro Express. Sitio de Demostración.</p>
-    </footer>
+        <aside class="summary" id="summary" tabindex="-1" aria-labelledby="summary-title"><div class="summary-top"><p class="eyebrow">CONSULTA DE EJEMPLO</p></div><h3 id="summary-title">Un buen punto<br>de partida.</h3><div id="summary-content" aria-live="polite" aria-atomic="true"><dl><dt>Espacio</dt><dd id="summary-space">Hogar</dd><dt>Prioridades</dt><dd id="summary-needs">Elija las zonas que le interesan.</dd><dt>Tamaño aproximado</dt><dd id="summary-size">Por definir</dd></dl></div><p id="review-status" class="review-status" role="status">El resumen cambia con sus elecciones.</p><p class="summary-note">No se ha enviado nada. Para una consulta real faltarían el alcance, la disponibilidad y el precio, acordados con un proveedor.</p><button type="button" id="reset" class="reset">Reiniciar elecciones <span aria-hidden="true">↺</span></button></aside>
+      </div>
+      <div class="questions"><details><summary>¿Esta empresa existe?</summary><p>No. LimpiaPro Express es una marca ficticia creada para mostrar un diseño web. No ofrece servicios ni acepta reservas.</p></details><details><summary>¿Se guardan mis elecciones?</summary><p>No. Las elecciones permanecen en la memoria de esta página y se reinician al recargar. No hay cuentas, cookies de marketing ni envío de datos.</p></details><details><summary>¿Las fotografías muestran trabajos realizados?</summary><p>No. Son fotografías de stock ilustrativas. No representan clientes, resultados ni espacios atendidos por esta marca.</p></details></div>
+    </div>
+  </section>
+</main>
+<footer class="footer wrap"><div><a class="brand" href="#inicio" translate="no">limpia<span class="brand-dot">.</span><small>LIMPIAPRO EXPRESS</small></a><p>Un concepto sobre el cuidado de los espacios.</p></div><div><p><strong>DEMOSTRACIÓN · negocio ficticio</strong><br>Diseño de Gerald, profesional independiente.</p><a href="./ASSET-LICENSES.md">Créditos y licencias <span aria-hidden="true">↗</span></a></div></footer>
 </body>
 </html>
