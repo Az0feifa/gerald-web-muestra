@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicio de Limpieza - Demo</title>
+    <style>
+        :root {
+            --primary: #0284c7;
+            --secondary: #e0f2fe;
+            --text-dark: #1e293b;
+            --text-light: #f8fafc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .demo-badge {
+            background-color: #991b1b;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            padding: 0.5rem;
+            position: static;
+            width: 100%;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: var(--text-light);
+            text-align: center;
+            padding: 4rem 1rem;
+            margin-top: 2rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background-color: var(--secondary);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .service-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .demo-cta { display:inline-block; margin-top:1.2rem; padding:.8rem 1.2rem; background:#fff; color:#075985; border-radius:8px; font-weight:700; text-decoration:none; }
+        .contact-demo { margin-top:2rem; padding:1.5rem; border:2px solid #0284c7; border-radius:8px; }
+        a:focus-visible { outline:3px solid #f59e0b; outline-offset:4px; }
+        footer {
+            background-color: var(--text-dark);
+            color: var(--text-light);
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-badge">ETIQUETA: DEMOSTRACIÓN</div>
+
+    <header>
+        <div class="container">
+            <h1>LimpiaPro Express</h1>
+            <p>Servicios de limpieza profesionales para su hogar u oficina</p>
+            <a class="demo-cta" href="#contacto-demo">Ver cómo sería la solicitud de cotización</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Nuestros Servicios</h2>
+        <div class="services">
+            <div class="service-card">
+                <h3>Limpieza Residencial</h3>
+                <p>Mantenemos su hogar impecable y libre de polvo con métodos eficientes y seguros.</p>
+            </div>
+            <div class="service-card">
+                <h3>Limpieza Comercial</h3>
+                <p>Soluciones para oficinas y comercios. Un entorno de trabajo limpio mejora la productividad.</p>
+            </div>
+            <div class="service-card">
+                <h3>Limpieza Profunda</h3>
+                <p>Ideal para final de obra o limpieza estacional. Nos enfocamos en cada pequeño detalle.</p>
+            </div>
+        </div>
+        <section id="contacto-demo" class="contact-demo" aria-labelledby="contacto-titulo">
+            <h2 id="contacto-titulo">Una consulta con la información necesaria</h2>
+            <p>En un sitio real, el botón abriría el WhatsApp autorizado del negocio con un mensaje sobre el tipo de limpieza, la zona y el tamaño aproximado del espacio.</p>
+            <p><strong>Esta es una demostración ficticia:</strong> no envía mensajes, no recibe solicitudes y no representa a una empresa real.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 LimpiaPro Express. Sitio de Demostración.</p>
+    </footer>
+</body>
+</html>
