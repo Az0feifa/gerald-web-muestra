@@ -3,9 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#f4f1e9">
-  <meta name="description" content="Demostración de diseño web para LimpiaPro Express, un negocio ficticio de limpieza en Costa Rica. Consulta local sin envío de datos.">
-  <title>LimpiaPro Express · Un espacio para respirar · Demostración</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; require-trusted-types-for 'script'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#f5f3ec">
+  <meta name="description" content="Muestra de sitio web rápido y pensado para celular: LimpiaPro Express, marca ficticia de limpieza en Costa Rica. Diseño de Gerald.">
+  <meta property="og:title" content="LimpiaPro Express · Muestra de sitio web">
+  <meta property="og:description" content="Una web que carga en milisegundos y lleva a sus clientes directo a WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CR">
+  <title>LimpiaPro Express · El espacio vuelve a respirar · Muestra</title>
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="./assets/fraunces.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="./assets/manrope.woff2" as="font" type="font/woff2" crossorigin>
@@ -14,65 +20,254 @@
 </head>
 <body>
 <a class="skip" href="#contenido">Saltar al contenido</a>
-<header class="header wrap">
-  <a class="brand" href="#inicio" aria-label="LimpiaPro Express, inicio" translate="no">limpia<span class="brand-dot">.</span><small>LIMPIAPRO EXPRESS</small></a>
-  <nav aria-label="Principal"><a href="#servicios">Servicios</a><a class="nav-cta" href="#consulta">Probar consulta <span aria-hidden="true">↗</span></a></nav>
+
+<header class="header" id="header">
+  <div class="wrap header-in">
+    <a class="brand" href="#inicio" aria-label="LimpiaPro Express, inicio" translate="no">limpia<span class="brand-dot">.</span></a>
+    <a class="sample-pill" href="#tu-web"><span class="pulse" aria-hidden="true"></span>Muestra</a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <a class="btn btn-ink btn-sm" href="#cotizar">Cotizar</a>
+  </div>
 </header>
+
 <main id="contenido">
-  <section class="hero wrap" id="inicio" aria-labelledby="hero-title">
-    <div class="hero-copy">
-      <p class="demo-tag"><span aria-hidden="true">◌</span> DEMOSTRACIÓN · negocio ficticio</p>
-      <p class="eyebrow">LIMPIEZA DE ESPACIOS · COSTA RICA</p>
-      <h1 id="hero-title">El espacio<br>vuelve a <em>respirar.</em></h1>
-      <p class="hero-description">Explore una consulta de limpieza pensada para su espacio y sus prioridades.</p>
-      <a class="button primary" href="#consulta">Preparar mi consulta <span aria-hidden="true">↗</span></a>
-      <p class="microcopy">Simulación local. No envía solicitudes.</p>
-      <div class="hero-foot"><span>Hogar / Oficina / Cuidado profundo</span><a href="#servicios" aria-label="Explorar los servicios">Explore <span aria-hidden="true">↓</span></a></div>
+  <section class="hero" id="inicio" aria-labelledby="hero-title">
+    <div class="aurora" aria-hidden="true"></div>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow hero-eyebrow"><span class="dot" aria-hidden="true"></span>Limpieza de hogares y oficinas · Costa Rica</p>
+        <h1 id="hero-title" class="hero-title">
+          <span class="line"><span class="word">El</span> <span class="word">espacio</span></span>
+          <span class="line"><span class="word">vuelve</span> <span class="word">a</span></span>
+          <span class="line"><em class="word">respirar.</em></span>
+        </h1>
+        <p class="hero-lead">Cotice en un minuto, reciba precio y fecha por WhatsApp y vuelva a disfrutar su casa u oficina.</p>
+        <div class="hero-actions">
+          <a class="btn btn-accent" href="#cotizar">Cotizar en 1 minuto <svg class="i" aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
+        </div>
+      </div>
+      <figure class="hero-media">
+        <div class="hero-frame">
+          <img src="./assets/hogar-960.webp" srcset="./assets/hogar-640.webp 640w, ./assets/hogar-960.webp 960w, ./assets/hogar-1280.webp 1280w" sizes="(max-width: 900px) 80vw, 46vw" width="1280" height="823" fetchpriority="high" alt="Sala luminosa con sofá claro, piso de madera y escalera de vidrio.">
+        </div>
+        <span class="chip-float chip-a"><svg class="i" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 7v5l3 2"/><circle cx="12" cy="12" r="9"/></svg>Cotización en 1 min</span>
+        <span class="chip-float chip-b"><svg class="i" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 20l1.4-4A8 8 0 1 1 8 18.6z"/></svg>Todo por WhatsApp</span>
+        <figcaption class="sr-only">Fotografía ilustrativa de stock.</figcaption>
+      </figure>
     </div>
-    <figure class="hero-image">
-      <img src="./assets/hogar-1280.webp" srcset="./assets/hogar-640.webp 640w, ./assets/hogar-1280.webp 1280w" sizes="(max-width: 700px) 100vw, 55vw" width="1280" height="823" fetchpriority="high" alt="Sala luminosa con sofá claro, piso de madera y escalera de vidrio.">
-      <div class="image-label" aria-hidden="true">El cuidado empieza<br>por su espacio.</div>
-      <figcaption>Fotografía ilustrativa. No es un trabajo realizado.</figcaption>
-    </figure>
   </section>
-  <section class="services" id="servicios" aria-labelledby="services-title">
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Hogar</span><span>Oficina</span><span>Cocinas</span><span>Baños</span><span>Pisos</span><span>Superficies</span><span>A fondo</span>
+      <span>Hogar</span><span>Oficina</span><span>Cocinas</span><span>Baños</span><span>Pisos</span><span>Superficies</span><span>A fondo</span>
+    </div>
+  </div>
+
+  <section class="section services" id="servicios" aria-labelledby="services-title">
     <div class="wrap">
-      <div class="section-heading"><p class="eyebrow">01 / EL SERVICIO</p><h2 id="services-title">Cada espacio.<br><em>Su propio cuidado.</em></h2><p>No todo necesita lo mismo. Explore estos alcances conceptuales y vea qué le gustaría consultar.</p></div>
-      <div class="service-layout">
-        <div class="service-picker">
-          <div class="service-buttons" role="group" aria-label="Explorar servicios">
-            <button type="button" data-service="hogar" aria-pressed="true" aria-controls="service-detail"><span class="number">01</span><span>Su hogar<small>El cuidado de todos los días</small></span><span class="service-arrow" aria-hidden="true">↗</span></button>
-            <button type="button" data-service="oficina" aria-pressed="false" aria-controls="service-detail"><span class="number">02</span><span>Su oficina<small>Un espacio para concentrarse</small></span><span class="service-arrow" aria-hidden="true">↗</span></button>
-            <button type="button" data-service="detalle" aria-pressed="false" aria-controls="service-detail"><span class="number">03</span><span>A fondo<small>Atención a zonas específicas</small></span><span class="service-arrow" aria-hidden="true">↗</span></button>
-          </div>
-          <div id="service-detail" class="service-detail" aria-live="polite" aria-atomic="true"><p class="eyebrow">ALCANCE CONCEPTUAL / HOGAR</p><h3>Para los espacios que usted vive.</h3><p>Una consulta sobre pisos, superficies accesibles, cocina y baños. Las prioridades y los materiales definirían el alcance de la visita.</p><p class="service-limit">Por confirmar: productos, frecuencia y condiciones del espacio.</p></div>
-          <div class="no-js-services"><h3>Oficina</h3><p>Superficies de trabajo despejadas, pisos y áreas compartidas. Equipos, documentos y objetos personales quedan fuera del alcance conceptual.</p><h3>A fondo</h3><p>Una zona específica, como cocina o baños, para definir materiales y necesidades. No se presupone limpieza especializada ni trabajo en altura.</p></div>
-          <a class="text-link" href="#consulta">Explorar mi necesidad <span aria-hidden="true">↗</span></a>
+      <div class="section-head reveal">
+        <p class="eyebrow">01 · Servicios</p>
+        <h2 id="services-title">Cada espacio pide <em>su propio cuidado.</em></h2>
+      </div>
+    </div>
+    <div class="cards-track" id="cards-track" tabindex="0" aria-label="Servicios, deslice para ver más">
+      <article class="card reveal">
+        <div class="card-media"><img src="./assets/sala-640.webp" srcset="./assets/sala-640.webp 640w, ./assets/sala-960.webp 960w, ./assets/sala-1280.webp 1280w" sizes="(max-width: 900px) 72vw, 30vw" width="1280" height="854" loading="lazy" decoding="async" alt="Sala con sofá beige y mesa de madera."></div>
+        <div class="card-body">
+          <span class="card-num">01</span>
+          <h3>Su hogar</h3>
+          <p>Pisos, superficies, cocina y baños. El cuidado de todos los días, a su ritmo.</p>
+          <a class="card-link" href="#cotizar" data-preset="Hogar">Cotizar hogar <svg class="i" aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
         </div>
-        <figure class="service-figure"><img id="service-image" src="./assets/sala-1280.webp" srcset="./assets/sala-640.webp 640w, ./assets/sala-1280.webp 1280w" sizes="(max-width: 700px) 100vw, 50vw" width="1280" height="854" loading="lazy" alt="Sala con sofá y superficies de madera, como ejemplo de un hogar."><figcaption><span id="image-context">HOGAR / ESPACIO ILUSTRATIVO</span><span>No es un caso de cliente.</span></figcaption></figure>
+      </article>
+      <article class="card reveal">
+        <div class="card-media"><img src="./assets/oficina-640.webp" srcset="./assets/oficina-640.webp 640w, ./assets/oficina-960.webp 960w, ./assets/oficina-1280.webp 1280w" sizes="(max-width: 900px) 72vw, 30vw" width="1280" height="718" loading="lazy" decoding="async" alt="Oficina luminosa con mesas de trabajo y plantas."></div>
+        <div class="card-body">
+          <span class="card-num">02</span>
+          <h3>Su oficina</h3>
+          <p>Escritorios, pisos y áreas comunes. Fuera de horario, para que su equipo solo note la diferencia.</p>
+          <a class="card-link" href="#cotizar" data-preset="Oficina">Cotizar oficina <svg class="i" aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="card-media"><img src="./assets/detalle-640.webp" srcset="./assets/detalle-640.webp 640w, ./assets/detalle-960.webp 960w, ./assets/detalle-1280.webp 1280w" sizes="(max-width: 900px) 72vw, 30vw" width="1280" height="854" loading="lazy" decoding="async" alt="Cocina con isla y gabinetes blancos."></div>
+        <div class="card-body">
+          <span class="card-num">03</span>
+          <h3>A fondo</h3>
+          <p>Una zona que necesita más atención: cocina, baños o después de una remodelación.</p>
+          <a class="card-link" href="#cotizar" data-preset="A fondo">Cotizar a fondo <svg class="i" aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+        </div>
+      </article>
+    </div>
+    <div class="wrap track-progress" aria-hidden="true"><span class="track-bar" id="track-bar"></span></div>
+  </section>
+
+  <section class="section steps-section" id="como-funciona" aria-labelledby="steps-title">
+    <div class="wrap steps-grid">
+      <div class="section-head reveal">
+        <p class="eyebrow">02 · Cómo funciona</p>
+        <h2 id="steps-title">Tres pasos. <em>Cero llamadas.</em></h2>
+        <p class="section-lead">Sin formularios largos ni esperas. Todo se coordina por WhatsApp.</p>
+      </div>
+      <ol class="timeline">
+        <li class="reveal"><span class="t-num">1</span><div><h3>Cuéntenos su espacio</h3><p>Elija el tipo de lugar, las zonas y el tamaño en el cotizador. Toma menos de un minuto.</p></div></li>
+        <li class="reveal"><span class="t-num">2</span><div><h3>Reciba su propuesta</h3><p>Le respondemos por WhatsApp con alcance, fecha y precio claros antes de agendar.</p></div></li>
+        <li class="reveal"><span class="t-num">3</span><div><h3>Vuelva a respirar</h3><p>Llegamos a la hora acordada y al terminar revisamos juntos lo que se hizo.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section bento-section" aria-labelledby="bento-title">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">03 · Por qué LimpiaPro</p>
+        <h2 id="bento-title">Lo que <em>sí</em> esperaría de una limpieza.</h2>
+      </div>
+      <div class="bento">
+        <div class="tile tile-dark reveal">
+          <svg class="tile-i" aria-hidden="true" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg>
+          <h3>Precio claro antes de llegar</h3>
+          <p>Usted sabe qué incluye y qué no, antes de confirmar.</p>
+        </div>
+        <div class="tile reveal">
+          <svg class="tile-i" aria-hidden="true" viewBox="0 0 24 24"><path d="M9 3h6v4l2 3v10a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V10l2-3z"/><path d="M7 14h10"/></svg>
+          <h3>Productos según la superficie</h3>
+          <p>Madera, porcelanato, acero o vidrio: cada material pide su cuidado.</p>
+        </div>
+        <div class="tile reveal">
+          <svg class="tile-i" aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+          <h3>Horarios que se acomodan</h3>
+          <p>Hogar entre semana, oficina fuera de horario.</p>
+        </div>
+        <div class="tile tile-mint reveal">
+          <svg class="tile-i" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 20l1.4-4A8 8 0 1 1 8 18.6z"/><path d="M9 10h6M9 13h4"/></svg>
+          <h3>Todo por WhatsApp</h3>
+          <p>Cotice, agende y confirme desde el chat que ya usa.</p>
+        </div>
       </div>
     </div>
   </section>
-  <section class="method wrap" id="recorrido" aria-labelledby="method-title">
-    <div><p class="eyebrow">02 / ANTES DE LA VISITA</p><h2 id="method-title">Primero, entender.<br><em>Después, cuidar.</em></h2><p>Así se organizaría una consulta. Un recorrido de ejemplo, no un procedimiento validado de un negocio real.</p></div>
-    <ol class="steps"><li><span class="number">01</span><div><h3>Conocer el espacio</h3><p>Tipo de lugar, tamaño aproximado y las zonas que requieren atención.</p></div></li><li><span class="number">02</span><div><h3>Acordar el alcance</h3><p>Prioridades, materiales, acceso y exclusiones. Precio y disponibilidad se confirmarían antes.</p></div></li><li><span class="number">03</span><div><h3>Revisar lo acordado</h3><p>Un repaso del alcance para que ambas partes sepan qué se atendería.</p></div></li></ol>
-  </section>
-  <section class="consultation" id="consulta" aria-labelledby="consult-title">
-    <div class="wrap"><div class="section-heading"><p class="eyebrow">03 / PRUEBE LA EXPERIENCIA</p><h2 id="consult-title">Su espacio.<br><em>Sus prioridades.</em></h2><p>Prepare una consulta de ejemplo. No le pediremos nombre, teléfono ni correo. Todo ocurre en esta página.</p></div>
-      <noscript><div class="fallback"><h3>Una consulta empieza por 3 decisiones.</h3><p>Piense en el espacio —hogar u oficina—, las zonas prioritarias y su tamaño aproximado. Con JavaScript activado puede probar el resumen interactivo. Esta página no envía solicitudes ni ofrece servicios reales.</p></div></noscript>
-      <div class="consult-grid" id="preparer" hidden>
-        <div class="choices">
-          <fieldset><legend><span>01</span> ¿Qué espacio necesita atención?</legend><div class="space-options"><label><input type="radio" name="espacio" value="Hogar" checked autocomplete="off"><span>Hogar</span></label><label><input type="radio" name="espacio" value="Oficina" autocomplete="off"><span>Oficina</span></label></div></fieldset>
-          <fieldset><legend><span>02</span> ¿Qué le gustaría priorizar?</legend><p class="field-hint">Puede elegir varias zonas.</p><div class="need-options"><label><input type="checkbox" name="prioridad" value="Pisos y superficies" autocomplete="off"><span>Pisos y superficies</span></label><label><input type="checkbox" name="prioridad" value="Cocina" autocomplete="off"><span>Cocina</span></label><label><input type="checkbox" name="prioridad" value="Baños" autocomplete="off"><span>Baños</span></label><label><input type="checkbox" name="prioridad" value="Atención a fondo" autocomplete="off"><span>Atención a fondo</span></label></div></fieldset>
-          <div class="size-field"><label for="tamano"><span>03</span> Tamaño aproximado</label><select id="tamano" name="tamano" autocomplete="off"><option value="Por definir">Todavía no lo sé</option><option value="Hasta 50 m²">Hasta 50 m²</option><option value="Entre 50 y 100 m²">Entre 50 y 100 m²</option><option value="Más de 100 m²">Más de 100 m²</option></select><p class="field-hint">Solo orienta la conversación. No calcula un precio.</p></div>
-          <button class="button primary" id="review" type="button">Revisar mi resumen <span aria-hidden="true">↓</span></button>
-        </div>
-        <aside class="summary" id="summary" tabindex="-1" aria-labelledby="summary-title"><div class="summary-top"><p class="eyebrow">CONSULTA DE EJEMPLO</p></div><h3 id="summary-title">Un buen punto<br>de partida.</h3><div id="summary-content" aria-live="polite" aria-atomic="true"><dl><dt>Espacio</dt><dd id="summary-space">Hogar</dd><dt>Prioridades</dt><dd id="summary-needs">Elija las zonas que le interesan.</dd><dt>Tamaño aproximado</dt><dd id="summary-size">Por definir</dd></dl></div><p id="review-status" class="review-status" role="status">El resumen cambia con sus elecciones.</p><p class="summary-note">No se ha enviado nada. Para una consulta real faltarían el alcance, la disponibilidad y el precio, acordados con un proveedor.</p><button type="button" id="reset" class="reset">Reiniciar elecciones <span aria-hidden="true">↺</span></button></aside>
+
+  <section class="section quote-section" id="cotizar" aria-labelledby="quote-title">
+    <div class="wrap quote-grid">
+      <div class="section-head reveal">
+        <p class="eyebrow">04 · Cotizador</p>
+        <h2 id="quote-title">Su cotización <em>en tres toques.</em></h2>
+        <p class="section-lead">Elija, revise y envíe. El mensaje llega listo a WhatsApp.</p>
       </div>
-      <div class="questions"><details><summary>¿Esta empresa existe?</summary><p>No. LimpiaPro Express es una marca ficticia creada para mostrar un diseño web. No ofrece servicios ni acepta reservas.</p></details><details><summary>¿Se guardan mis elecciones?</summary><p>No. Las elecciones permanecen en la memoria de esta página y se reinician al recargar. No hay cuentas, cookies de marketing ni envío de datos.</p></details><details><summary>¿Las fotografías muestran trabajos realizados?</summary><p>No. Son fotografías de stock ilustrativas. No representan clientes, resultados ni espacios atendidos por esta marca.</p></details></div>
+
+      <div class="wizard reveal" id="wizard">
+        <div class="wizard-top">
+          <span class="wizard-count" id="wizard-count">Paso 1 de 3</span>
+          <span class="wizard-progress" aria-hidden="true"><span id="wizard-bar"></span></span>
+        </div>
+
+        <form class="wizard-form" id="wizard-form" action="#" novalidate>
+          <fieldset class="step is-active" data-step="1">
+            <legend>¿Qué espacio necesita atención?</legend>
+            <div class="options options-2">
+              <label class="opt opt-big"><input type="radio" name="espacio" value="Hogar" checked><span><svg class="i" aria-hidden="true" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>Hogar</span></label>
+              <label class="opt opt-big"><input type="radio" name="espacio" value="Oficina"><span><svg class="i" aria-hidden="true" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h2M14 7h2M8 11h2M14 11h2M8 15h2M14 15h2"/></svg>Oficina</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="step" data-step="2">
+            <legend>¿Qué le gustaría priorizar?</legend>
+            <p class="hint">Puede elegir varias.</p>
+            <div class="options">
+              <label class="opt"><input type="checkbox" name="zona" value="Pisos y superficies"><span>Pisos y superficies</span></label>
+              <label class="opt"><input type="checkbox" name="zona" value="Cocina"><span>Cocina</span></label>
+              <label class="opt"><input type="checkbox" name="zona" value="Baños"><span>Baños</span></label>
+              <label class="opt"><input type="checkbox" name="zona" value="Limpieza a fondo"><span>Limpieza a fondo</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="step" data-step="3">
+            <legend>¿Qué tamaño tiene, más o menos?</legend>
+            <div class="options">
+              <label class="opt"><input type="radio" name="tamano" value="Hasta 50 m²"><span>Hasta 50 m²</span></label>
+              <label class="opt"><input type="radio" name="tamano" value="Entre 50 y 100 m²"><span>50 a 100 m²</span></label>
+              <label class="opt"><input type="radio" name="tamano" value="Más de 100 m²"><span>Más de 100 m²</span></label>
+              <label class="opt"><input type="radio" name="tamano" value="Por definir" checked><span>Aún no sé</span></label>
+            </div>
+          </fieldset>
+
+          <div class="step step-result" data-step="4" tabindex="-1" aria-labelledby="result-title">
+            <p class="eyebrow">Su resumen</p>
+            <h3 id="result-title">Listo para enviar.</h3>
+            <dl class="summary">
+              <div><dt>Espacio</dt><dd id="sum-espacio">Hogar</dd></div>
+              <div><dt>Prioridades</dt><dd id="sum-zona">Por definir</dd></div>
+              <div><dt>Tamaño</dt><dd id="sum-tamano">Por definir</dd></div>
+            </dl>
+          </div>
+
+          <div class="wizard-nav">
+            <button class="btn btn-ghost" type="button" id="wizard-back" hidden>Atrás</button>
+            <button class="btn btn-ink" type="button" id="wizard-next" hidden>Siguiente <svg class="i" aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            <a class="btn btn-wa" id="wizard-send" href="https://wa.me/50672987020?text=Hola%20Gerald%2C%20vi%20la%20muestra%20web%20de%20LimpiaPro%20y%20prob%C3%A9%20el%20cotizador.%20Quiero%20una%20web%20as%C3%AD%20para%20mi%20negocio." target="_blank" rel="noopener noreferrer"><svg class="i" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 20l1.4-4A8 8 0 1 1 8 18.6z"/></svg>Enviar por WhatsApp</a>
+          </div>
+          <p class="wizard-note" id="wizard-note">Es una muestra: el mensaje le llega a Gerald, quien diseñó esta web. Así le llegarían los clientes a usted.</p>
+          <p class="sr-only" role="status" id="wizard-status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section faq-section" id="preguntas" aria-labelledby="faq-title">
+    <div class="wrap faq-grid">
+      <div class="section-head reveal">
+        <p class="eyebrow">05 · Preguntas</p>
+        <h2 id="faq-title">Antes de <em>escribirnos.</em></h2>
+      </div>
+      <div class="faq">
+        <details class="reveal"><summary>¿Cuánto cuesta una limpieza?</summary><div class="faq-a"><p>Depende del tamaño, las zonas y el estado del espacio. Con el cotizador nos da esos datos y le respondemos con un precio cerrado antes de agendar.</p></div></details>
+        <details class="reveal"><summary>¿Llevan productos y equipo?</summary><div class="faq-a"><p>Sí. Si prefiere que usemos productos específicos, lo indicamos en la propuesta.</p></div></details>
+        <details class="reveal"><summary>¿Atienden fines de semana?</summary><div class="faq-a"><p>Hogares de lunes a sábado; oficinas también fuera de horario. Lo coordinamos por WhatsApp.</p></div></details>
+        <details class="reveal"><summary>¿LimpiaPro existe?</summary><div class="faq-a"><p>No. LimpiaPro Express es una marca ficticia que creó Gerald para mostrar cómo puede verse la web de su negocio. Las fotos son de stock y los mensajes del cotizador le llegan a Gerald.</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="pitch" id="tu-web" aria-labelledby="pitch-title">
+    <div class="pitch-glow" aria-hidden="true"></div>
+    <div class="wrap pitch-grid">
+      <div class="reveal">
+        <p class="eyebrow eyebrow-mint">Esta web es una muestra</p>
+        <h2 id="pitch-title">¿Le gustó? <em>Su negocio puede tener una así.</em></h2>
+        <p class="speed" id="speed" hidden>Esta página cargó en <strong id="speed-value">0,00 s</strong> en su dispositivo.</p>
+      </div>
+      <div class="reveal">
+        <ul class="checks">
+          <li>Carga en milisegundos, también con datos móviles.</li>
+          <li>Diseñada primero para el celular.</li>
+          <li>Sus clientes le escriben directo a WhatsApp.</li>
+          <li>Lista para aparecer en Google.</li>
+        </ul>
+        <a class="btn btn-wa btn-lg" href="https://wa.me/50672987020?text=Hola%20Gerald%2C%20vi%20la%20muestra%20web%20de%20LimpiaPro%20y%20quiero%20una%20para%20mi%20negocio." target="_blank" rel="noopener noreferrer"><svg class="i" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 20l1.4-4A8 8 0 1 1 8 18.6z"/></svg>Quiero una web así</a>
+        <p class="pitch-sub">Escríbale a Gerald · +506 7298 7020</p>
+      </div>
     </div>
   </section>
 </main>
-<footer class="footer wrap"><div><a class="brand" href="#inicio" translate="no">limpia<span class="brand-dot">.</span><small>LIMPIAPRO EXPRESS</small></a><p>Un concepto sobre el cuidado de los espacios.</p></div><div><p><strong>DEMOSTRACIÓN · negocio ficticio</strong><br>Diseño de Gerald, profesional independiente.</p><a href="./ASSET-LICENSES.md">Créditos y licencias <span aria-hidden="true">↗</span></a></div></footer>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <a class="brand brand-light" href="#inicio" translate="no">limpia<span class="brand-dot">.</span></a>
+    <p>LimpiaPro Express es una marca ficticia creada como muestra. Diseño y desarrollo: Gerald.</p>
+    <a class="footer-link" href="./ASSET-LICENSES.md">Créditos y licencias</a>
+  </div>
+</footer>
+
+<aside class="dock" id="dock" aria-label="Contacto por WhatsApp">
+  <p class="dock-text"><strong>¿Le gusta esta web?</strong><span>Puede tener una así.</span></p>
+  <a class="btn btn-wa btn-sm" href="https://wa.me/50672987020?text=Hola%20Gerald%2C%20vi%20la%20muestra%20web%20de%20LimpiaPro%20y%20quiero%20una%20para%20mi%20negocio." target="_blank" rel="noopener noreferrer"><svg class="i" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 20l1.4-4A8 8 0 1 1 8 18.6z"/></svg>Quiero una así</a>
+</aside>
 </body>
 </html>
